@@ -22,7 +22,7 @@ class Employee implements Workable, Eatable {
 
 class Robot implements Workable {
   public work(): void {
-    console.log("Robot is working");
+    console.log("Robot is worqking");
   }
 }
 

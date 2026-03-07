@@ -1,3 +1,5 @@
+export {};
+
 // ✅ OCP를 적용한 코드
 
 interface Report {
@@ -5,19 +7,19 @@ interface Report {
 }
 
 class PDFReport implements Report {
-  generate(): void {
+  public generate(): void {
     console.log("Generating PDF report...");
   }
 }
 
 class HTMLReport implements Report {
-  generate(): void {
+  public generate(): void {
     console.log("Generating HTML report...");
   }
 }
 
 class XMLReport implements Report {
-  generate(): void {
+  public generate(): void {
     console.log("Generating XML report...");
   }
 }

@@ -1,3 +1,5 @@
+export {};
+
 // ⛔️ OCP를 위반한 코드
 
 class ReportGenerator {

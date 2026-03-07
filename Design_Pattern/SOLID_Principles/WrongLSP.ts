@@ -1,13 +1,15 @@
+export {};
+
 // ⛔️ LSP를 위반한 코드
 
 class Bird {
-  fly(): void {
+  public fly(): void {
     console.log("Bird is flying");
   }
 }
 
 class Penguin extends Bird {
-  fly(): void {
+  public fly(): void {
     throw new Error("Penguins cannot fly");
   }
 }
