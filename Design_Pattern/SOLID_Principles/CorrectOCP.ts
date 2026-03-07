@@ -1,4 +1,5 @@
 // ✅ OCP를 적용한 코드
+
 interface Report {
   generate(): void;
 }

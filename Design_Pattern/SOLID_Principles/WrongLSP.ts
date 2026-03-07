@@ -1,3 +1,5 @@
+// ⛔️ LSP를 위반한 코드
+
 class Bird {
   fly(): void {
     console.log("Bird is flying");
