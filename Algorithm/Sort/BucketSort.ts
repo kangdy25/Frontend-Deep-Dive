@@ -6,21 +6,21 @@
 function bucketSort(array: number[], bucketSize: number = 5): number[] {
   if (array.length <= 1) return array;
 
-  // 1. 최솟값과 최댓값을 찾아 전체 범위를 파악
+  // 최솟값과 최댓값을 찾아 전체 범위를 파악
   const min = Math.min(...array);
   const max = Math.max(...array);
 
-  // 2. 필요한 바구니의 개수 계산
+  // 필요한 바구니의 개수 계산
   const bucketCount = Math.floor((max - min) / bucketSize) + 1;
   const buckets: number[][] = Array.from({ length: bucketCount }, () => []);
 
-  // 3. 데이터를 규칙에 따라 알맞은 바구니에 배분 (Distribution)
+  // 데이터를 규칙에 따라 알맞은 바구니에 배분 (Distribution)
   for (const num of array) {
     const bucketIndex = Math.floor((num - min) / bucketSize);
     buckets[bucketIndex].push(num);
   }
 
-  // 4. 각 바구니 내부를 정렬하고 하나로 합침 (Gather)
+  // 각 바구니 내부를 정렬하고 하나로 합침 (Gather)
   const result: number[] = [];
   for (const bucket of buckets) {
     if (bucket.length > 0) {
