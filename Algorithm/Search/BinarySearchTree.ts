@@ -55,6 +55,16 @@ class BinarySearchTree<T> {
     this.root = this.deleteNode(this.root, value);
   }
 
+  // 오른쪽 서브 트리에서 가장 왼쪽 끝(최솟값)까지 내려갑니다.
+  private getMinValue(node: TreeNode<T>): T {
+    let min = node.value;
+    while (node.left !== null) {
+      min = node.left.value;
+      node = node.left;
+    }
+    return min;
+  }
+
   private deleteNode(node: TreeNode<T> | null, value: T): TreeNode<T> | null {
     if (node === null) return null;
 
@@ -78,16 +88,6 @@ class BinarySearchTree<T> {
       node.right = this.deleteNode(node.right, node.value);
     }
     return node;
-  }
-
-  // 오른쪽 서브 트리에서 가장 왼쪽 끝(최솟값)까지 내려갑니다.
-  private getMinValue(node: TreeNode<T>): T {
-    let min = node.value;
-    while (node.left !== null) {
-      min = node.left.value;
-      node = node.left;
-    }
-    return min;
   }
 }
 
