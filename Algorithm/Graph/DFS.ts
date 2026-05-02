@@ -1,4 +1,4 @@
-class Graph {
+class GraphForDFS {
   // 인접 리스트를 저장할 맵
   private adjacencyList: Map<string, string[]>;
 
@@ -69,21 +69,21 @@ class Graph {
 }
 
 // --- 실행 테스트 ---
-const graph = new Graph();
-graph.addVertex("A");
-graph.addVertex("B");
-graph.addVertex("C");
-graph.addVertex("D");
-graph.addVertex("E");
-graph.addVertex("F");
+const graphForDFS = new GraphForDFS();
+graphForDFS.addVertex("A");
+graphForDFS.addVertex("B");
+graphForDFS.addVertex("C");
+graphForDFS.addVertex("D");
+graphForDFS.addVertex("E");
+graphForDFS.addVertex("F");
 
-graph.addEdge("A", "B");
-graph.addEdge("A", "C");
-graph.addEdge("B", "D");
-graph.addEdge("C", "E");
-graph.addEdge("D", "E");
-graph.addEdge("D", "F");
-graph.addEdge("E", "F");
+graphForDFS.addEdge("A", "B");
+graphForDFS.addEdge("A", "C");
+graphForDFS.addEdge("B", "D");
+graphForDFS.addEdge("C", "E");
+graphForDFS.addEdge("D", "E");
+graphForDFS.addEdge("D", "F");
+graphForDFS.addEdge("E", "F");
 
-console.log("DFS (재귀):", graph.dfsRecursive("A"));
-console.log("DFS (반복):", graph.dfsIterative("A"));
+console.log("DFS (재귀):", graphForDFS.dfsRecursive("A"));
+console.log("DFS (반복):", graphForDFS.dfsIterative("A"));
