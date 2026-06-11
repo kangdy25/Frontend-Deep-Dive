@@ -21,7 +21,7 @@
 ```text
 Frontend-Deep-Dive
 │
-├── 🧮 Algorithm
+├── ⚙️ Algorithm
 ├── 🏗️ Design_Pattern
 └── 🛠️ Software_Engineering
 ```
@@ -64,12 +64,19 @@ npm install
 ## 📈 Engineering Philosophy
 
 ### Never Assume, Verify
+
 동작을 암기하지 않고 직접 검증합니다.
+
 ### Understand Before Using
+
 사용하기 전에 원리를 이해합니다.
+
 ### Build From First Principles
+
 추상화 뒤에 숨겨진 본질을 탐구합니다.
+
 ### Theory Meets Practice
+
 이론과 실제 구현을 연결하여 학습합니다.
 
 ---
